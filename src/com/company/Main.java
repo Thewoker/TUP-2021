@@ -6,12 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        File archivo = new File("Archivo de prueba.txt");
-        System.out.println(archivo.getAbsoluteFile());
+        File archivo = new File("C:" + File.separator + "Users" + File.separator + "Usuario" + File.separator + "Desktop" + File.separator + "TUP-2021");
 
-        if (archivo.exists()) {
-            System.out.println("El archivo existe");
+        String[] nombres = archivo.list();
+
+        for (int i = 0; i < nombres.length; i++){
+            System.out.println(nombres[i]);
         }
-        else System.out.println("No existe");
+
     }
 }
